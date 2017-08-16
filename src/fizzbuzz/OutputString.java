@@ -8,4 +8,8 @@ class OutputString {
         if (source % 5 == 0) this.value = this.value + "buzz";
         if (this.value.isEmpty()) this.value = source.toString();
     }
+
+    String asText(){
+        return value;
+    }
 }
