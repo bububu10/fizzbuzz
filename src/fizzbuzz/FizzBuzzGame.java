@@ -13,10 +13,11 @@ public class FizzBuzzGame {
     public void start() {
         IntStream.rangeClosed(1, limit)
                 .mapToObj(InputInteger::new)
+                .map(InputInteger::asFizzBuzzText)
                 .forEach(this::outputConsole);
     }
 
-    private void outputConsole(InputInteger input) {
-        System.out.println(input.asFizzBuzzText());
+    private void outputConsole(String outputText) {
+        System.out.println(outputText);
     }
 }
