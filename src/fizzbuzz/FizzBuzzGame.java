@@ -11,7 +11,7 @@ public class FizzBuzzGame {
     }
 
     public void start() {
-        IntStream.range(1, limit)
+        IntStream.rangeClosed(1, limit)
                 .mapToObj(InputInteger::new)
                 .forEach(this::outputConsole);
     }
