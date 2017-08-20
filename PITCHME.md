@@ -36,7 +36,7 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 @[7,9,11,13,15](「変換ルール」の「割り切れる」という概念がjavaの文法の中に隠れている)
 @[8,10,12,14](「判断->変換」と「コンソール出力」の２つの関心事が強く結合している)
 @[16](「各項を半角スペース区切りで出力する」という意図が分かりにくい)
-@[5-18](forループの中でif文分岐、というネストは読むのがめんどう)
+@[6-17](forループの中でif文分岐、というネストは読むのがめんどう)
 
 ---
 
@@ -57,7 +57,7 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 ```
 
 * 「自然数」「連続した自然数の数列」という重要な概念（ドメインモデル）を明示的に。
-* 「半角スペース区切りでコンソールに出力する」というのはFizzBuzzゲームの本質的な関心事ではないが重要な要件。
+* 「コンソールに出力する」というのはFizzBuzzゲームの本質的な関心事ではないが「表示」の重要な要件。
 * FizzBuzzGameは「modelを使ってviewへ出力する」ことだけをやるようにする。
 
 ---?code=src/fizzbuzz/transactionscript/FizzBuzzGame.java&lang=java
