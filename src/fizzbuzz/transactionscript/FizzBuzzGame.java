@@ -2,8 +2,8 @@ package fizzbuzz.transactionscript;
 
 public class FizzBuzzGame {
 
-    public static void start(int limit) {
-        for (int number = 1; number <= limit; number++) {
+    public static void start(int start, int end) {
+        for (int number = start; number <= end; number++) {
             if (number % 15 == 0) {
                 System.out.println("fizzbuzz");
             } else if (number % 3 == 0) {
