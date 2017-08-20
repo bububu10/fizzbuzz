@@ -75,11 +75,11 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 @[4,18-20](このクラス内だけで使う「割り切れる」という概念を明示的に表現する説明的な関数)
 
 ---?code=src/fizzbuzz/oop/model/FirstTerm.java&lang=java
-@[4-9](初期化：値を保持する)
-@[11-13](末項との関係を検査する関数)
+@[4-8](初期化：値を保持する)
+@[10-12](末項との関係を検査する関数)
 
 ---?code=src/fizzbuzz/oop/model/LastTerm.java&lang=java
-@[4-9](初期化：値を保持する)
+@[4-8](初期化：値を保持する)
 
 ---?code=src/fizzbuzz/oop/view/ConsoleView.java&lang=java
 @[5-7](引数で受け取ったものをコンソールへ出力するだけ)
