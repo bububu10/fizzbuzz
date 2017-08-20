@@ -20,7 +20,9 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 ## まずは手続き的に実装（Transaction Script）
 
 ---?code=src/fizzbuzz/transactionscript/FizzBuzzGame.java&lang=java
+手続きの実装
 ---?code=src/Main.java&lang=java
+手続きの呼び出し側
 @[7,11-15](FizzBuzzGameのstart=1、end=100を与えて実行する)
 
 ---
