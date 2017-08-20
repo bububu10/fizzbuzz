@@ -3,7 +3,6 @@ package fizzbuzz.transactionscript;
 public class FizzBuzzGame {
 
     public static void start(int limit) {
-
         for (int number = 1; number <= limit; number++) {
             if (number % 15 == 0) {
                 System.out.println("fizzbuzz");
@@ -15,6 +14,5 @@ public class FizzBuzzGame {
                 System.out.println(number);
             }
         }
-
     }
 }
