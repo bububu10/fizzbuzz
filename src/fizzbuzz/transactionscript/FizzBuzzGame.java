@@ -4,7 +4,7 @@ public class FizzBuzzGame {
 
     public static void start(int start, int end) {
         for (int inputNumber = start; inputNumber <= end; inputNumber++) {
-            if (inputNumber % 15 == 0) {
+            if (inputNumber % 3 == 0 && inputNumber % 5 == 0) {
                 System.out.println("fizzbuzz");
             } else if (inputNumber % 3 == 0) {
                 System.out.println("fizz");

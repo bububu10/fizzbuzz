@@ -8,7 +8,7 @@ class InputInteger {
     }
 
     String asFizzBuzzText() {
-        if (this.isDivisibleBy(15)) return "fizzbuzz";
+        if (this.isDivisibleBy(3) && this.isDivisibleBy(5)) return "fizzbuzz";
         if (this.isDivisibleBy(3)) return "fizz";
         if (this.isDivisibleBy(5)) return "buzz";
         return value.toString();
