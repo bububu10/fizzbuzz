@@ -14,7 +14,7 @@ public class InputIntegers {
     }
 
     public String asOutputText() {
-        return String.join("\n",
+        return String.join(" ",
                 values.stream()
                         .map(InputInteger::asFizzBuzzText)
                         .collect(Collectors.toList()));
