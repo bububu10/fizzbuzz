@@ -2,13 +2,21 @@
 
 ---
 
-## Fizz Buzzの仕様
+## 今回実装するFizzBuzzの仕様
 
-> プレイヤーは円状に座る。最初のプレイヤーは「1」と数字を発言する。次のプレイヤーは直前のプレイヤーの次の数字を発言していく。ただし、3で割り切れる場合は「Fizz」（Bizz Buzzの場合は「Bizz」）、5で割り切れる場合は「Buzz」、両者で割り切れる場合（すなわち15で割り切れる場合）は「Fizz Buzz」（Bizz Buzzの場合は「Bizz Buzz」）を数の代わりに発言しなければならない。発言を間違えた者や、ためらった者は脱落となる。
+* プログラムには1から順番に整数（半角数字）を与え、以下のルールで変換される文字列をコンソールに出力する。
+* なお、各文字列は半角スペース区切りで表示する。
+* 変換ルール
+  * 与えられた整数が3で割り切れるなら「Fizz」と表示する
+  * 与えられた整数が5で割り切れるなら「Buzz」と表示する
+  * 与えられた整数が両方で割り切れるなら「FizzBuzz」と表示する。
 
-ref. https://ja.wikipedia.org/wiki/Fizz_Buzz
+ref. FizzBuzz問題の概要については右を参照 https://ja.wikipedia.org/wiki/Fizz_Buzz
+
+---
+
+## まずは手続き的に実装（Transaction Script）
 
 ---?code=src/fizzbuzz/transactionscript/FizzBuzzGame.java
-## Transaction Script（手続き的に書く）
 
 ---
