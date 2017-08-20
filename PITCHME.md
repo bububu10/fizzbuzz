@@ -6,7 +6,10 @@
 
 ---
 
-連続した自然数の数列の各項を以下のルールで変換し、その結果を半角スペース区切りでコンソールに出力する。
+連続した自然数の数列の各項を次のルールで変換し、
+その結果を半角スペース区切りでコンソールに出力する。
+
+---
 
 * 変換ルール
   * 3で割り切れるなら「Fizz」と表示する
@@ -20,13 +23,15 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 
 実行結果の例
 
-1から100までの連続した自然数の数列を処理した時に、
+---
+
+1から100までの連続した自然数の数列を処理すると
 
 ```text
 1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz Fizz 22 23 Fizz Buzz 26 Fizz 28 29 FizzBuzz 31 32 Fizz 34 Buzz Fizz 37 38 Fizz Buzz 41 Fizz 43 44 FizzBuzz 46 47 Fizz 49 Buzz Fizz 52 53 Fizz Buzz 56 Fizz 58 59 FizzBuzz 61 62 Fizz 64 Buzz Fizz 67 68 Fizz Buzz 71 Fizz 73 74 FizzBuzz 76 77 Fizz 79 Buzz Fizz 82 83 Fizz Buzz 86 Fizz 88 89 FizzBuzz 91 92 Fizz 94 Buzz Fizz 97 98 Fizz Buzz
 ```
 
-という結果が得られる。
+上記の結果が得られる。
 
 --- 
 
@@ -34,10 +39,16 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 
 ---
 
-OOP(Object Oriented Programing) = オブジェクト指向プログラミング
+オブジェクト指向プログラミング  
+OOP(Object Oriented Programing)
+
+---
 
 * データとふるまいを持つ「オブジェクト」を組み合わせることによって、機能を実現する。
-* オブジェクトはプログラムの「関心事」を明示的に表現し「単一の責任」を果たすもの。
+* オブジェクトはプログラムの「関心事」を表現し、「単一の責任」を果たす。
+
+---
+
 * 機能を実現するために「手続きを記述する」のではなく「関心事をオブジェクトモデル化する」という考え方をする。
 * 「手続きを記述する」アプローチはTransaction Scriptと呼ばれる。気を抜くとこちらになりがち。
 
@@ -49,19 +60,31 @@ OOP(Object Oriented Programing) = オブジェクト指向プログラミング
 
 「実装」という言葉は「仕様」とセット。
 
-* 仕様：プログラムが実現すべき機能。ふつう自然言語や図表によって記述される。
-* 実装：仕様を満たすプログラムそのもの、またはプログラムを記述する行為のこと。
+---
+
+* 仕様
+  * プログラムが実現すべき機能。ふつう自然言語や図表によって記述される。
+* 実装
+  * 仕様を満たすプログラムそのもの、またはプログラムを記述する行為のこと。
+
+---
 
 これまでのスライドでいうと、
 
-* 「FizzBuzzとは？」：「仕様」についての記述
-* 「OOPとは？」：「実装」のアプローチについての記述
+---
+
+* 「FizzBuzzとは？」
+  * 「仕様」についての記述
+* 「OOPとは？」
+  * 「実装」のアプローチについての記述
+
+---
 
 今回はFizzBuzzという仕様を、Javaというプログラミング言語を使ってOOPアプローチで実装する。
 
 ---
 
-## が、まずは手続き的に実装（Transaction Script）
+## まずは手続き的に実装
 
 ---?code=src/fizzbuzz/transactionscript/FizzBuzzGame.java&lang=java
 @[6,17](「連続した自然数の数列」という重要な概念が繰り返し構文の中に隠れている)
@@ -72,7 +95,7 @@ OOP(Object Oriented Programing) = オブジェクト指向プログラミング
 
 ---
 
-## オブジェクト指向に忠実に実装(OOP)
+## オブジェクト指向に忠実に実装
 
 ---
 
@@ -80,7 +103,9 @@ OOP(Object Oriented Programing) = オブジェクト指向プログラミング
 
 ---
 
-すべてを厳格に適用する気はないが指針として以下を意識する。
+すべてを厳格に適用する気はないが指針として次のルールを意識する。
+
+---
 
 1. １つのメソッドにつきインデントは１段階までにすること
 2. else 句を使用しないこと
