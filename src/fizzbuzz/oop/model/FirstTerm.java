@@ -11,4 +11,7 @@ public class FirstTerm {
         return lastTerm.naturalNumber.value < this.naturalNumber.value;
     }
 
+    Integer asNumeric() {
+        return naturalNumber.value;
+    }
 }

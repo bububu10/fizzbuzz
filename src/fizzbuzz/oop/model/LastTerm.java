@@ -6,4 +6,8 @@ public class LastTerm {
     public LastTerm(Integer value) {
         this.naturalNumber = new NaturalNumber(value);
     }
+
+    Integer asNumeric() {
+        return naturalNumber.value;
+    }
 }

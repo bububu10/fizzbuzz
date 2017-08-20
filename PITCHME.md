@@ -2,11 +2,12 @@
 
 ---
 
-## FizzBuzzの仕様
+## FizzBuzzとは？
 
 ---
 
-* 連続した自然数の数列の各項を以下のルールで変換し、その結果を半角スペース区切りでコンソールに出力する。
+連続した自然数の数列の各項を以下のルールで変換し、その結果を半角スペース区切りでコンソールに出力する。
+
 * 変換ルール
   * 3で割り切れるなら「Fizz」と表示する
   * 5で割り切れるなら「Buzz」と表示する
@@ -17,19 +18,50 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 
 ---
 
-## 実行結果の例
----
+実行結果の例
 
-1から100までの連続した自然数の数列を処理した場合、
-以下のような結果がコンソールに出力される。
+1から100までの連続した自然数の数列を処理した時に、
 
 ```text
 1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz Fizz 22 23 Fizz Buzz 26 Fizz 28 29 FizzBuzz 31 32 Fizz 34 Buzz Fizz 37 38 Fizz Buzz 41 Fizz 43 44 FizzBuzz 46 47 Fizz 49 Buzz Fizz 52 53 Fizz Buzz 56 Fizz 58 59 FizzBuzz 61 62 Fizz 64 Buzz Fizz 67 68 Fizz Buzz 71 Fizz 73 74 FizzBuzz 76 77 Fizz 79 Buzz Fizz 82 83 Fizz Buzz 86 Fizz 88 89 FizzBuzz 91 92 Fizz 94 Buzz Fizz 97 98 Fizz Buzz
 ```
 
+という結果が得られる。
+
+--- 
+
+## OOPとは？
+
 ---
 
-## まずは手続き的に実装（Transaction Script）
+OOP(Object Oriented Programing) = オブジェクト指向プログラミング
+
+* データとふるまいを持つ「オブジェクト」を組み合わせることによって、機能を実現する。
+* オブジェクトはプログラムの「関心事」を明示的に表現し「単一の責任」を果たすもの。
+* 機能を実現するために「手続きを記述する」のではなく「関心事をオブジェクトモデル化する」という考え方をする。
+* 「手続きを記述する」アプローチはTransaction Scriptと呼ばれる。気を抜くとこちらになりがち。
+
+---
+
+## 「実装する」とは？
+
+---
+
+「実装」という言葉は「仕様」とセット。
+
+* 仕様：プログラムが実現すべき機能。ふつう自然言語や図表によって記述される。
+* 実装：仕様を満たすプログラムそのもの、またはプログラムを記述する行為のこと。
+
+これまでのスライドでいうと、
+
+* 「FizzBuzzとは？」：「仕様」についての記述
+* 「OOPとは？」：「実装」のアプローチについての記述
+
+今回はFizzBuzzという仕様を、Javaというプログラミング言語を使ってOOPアプローチで実装する。
+
+---
+
+## が、まずは手続き的に実装（Transaction Script）
 
 ---?code=src/fizzbuzz/transactionscript/FizzBuzzGame.java&lang=java
 @[6,17](「連続した自然数の数列」という重要な概念が繰り返し構文の中に隠れている)
@@ -41,6 +73,26 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 ---
 
 ## オブジェクト指向に忠実に実装(OOP)
+
+---
+
+具体的な指針：オブジェクト指向エクササイズの9つのルール
+
+---
+
+すべてを厳格に適用する気はないが指針として以下を意識する。
+
+1. １つのメソッドにつきインデントは１段階までにすること
+2. else 句を使用しないこと
+3. すべてのプリミティブ型と文字列型をラップすること
+4. １行につきドットは１つまでにすること
+5. 名前を省略しないこと
+6. すべてのエンティティを小さくすること
+7. １つのクラスにつきインスタンス変数は２つまでにすること
+8. ファーストクラスコレクションを使用すること
+9. Getter, Setter, プロパティを使用しないこと
+
+ref. オブジェクト指向できていますか？(SlideShare) https://www.slideshare.net/MoriharuOhzu/ss-14083300
 
 ---
 
@@ -72,14 +124,16 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 ---?code=src/fizzbuzz/oop/model/NaturalNumber.java&lang=java
 @[4-9](初期化：自然数としての整合性チェック、値を保持する)
 @[4,11-16](FizzBuzzの変換ルールに則ったテキスト表現を返す)
-@[4,18-20](このクラス内だけで使う「割り切れる」という概念を明示的に表現する説明的な関数)
+@[4,18-20](自身が引数で「割り切れる」か検査する)
 
 ---?code=src/fizzbuzz/oop/model/FirstTerm.java&lang=java
 @[4-8](初期化：値を保持する)
-@[10-12](末項との関係を検査する関数)
+@[10-12](末項との関係を検査する)
+@[14-16](自身の数値表現を返す)
 
 ---?code=src/fizzbuzz/oop/model/LastTerm.java&lang=java
 @[4-8](初期化：値を保持する)
+@[10-12](自身の数値表現を返す)
 
 ---?code=src/fizzbuzz/oop/view/ConsoleView.java&lang=java
 @[5-7](引数で受け取ったものをコンソールへ出力するだけ)
