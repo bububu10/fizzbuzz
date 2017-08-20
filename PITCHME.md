@@ -32,12 +32,6 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 ## まずは手続き的に実装（Transaction Script）
 
 ---?code=src/fizzbuzz/transactionscript/FizzBuzzGame.java&lang=java
-
----
-
-これはこれでシンプルなので悪くはないが。。。
-
----?code=src/fizzbuzz/transactionscript/FizzBuzzGame.java&lang=java
 @[6,17](「連続した自然数の数列」という重要な概念が繰り返し構文の中に隠れている)
 @[7,9,11,13](「変換ルール」の「割り切れる」という概念がjavaの文法の中に隠れている)
 @[8,10,12,14](「判断->変換」と「コンソール出力」２つの関心事が強く結合している)
