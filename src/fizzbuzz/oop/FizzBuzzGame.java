@@ -1,21 +1,14 @@
 package fizzbuzz.oop;
 
-import java.util.stream.IntStream;
-
 public class FizzBuzzGame {
+    InputIntegers inputIntegers;
 
-    private Integer limit;
-
-    public FizzBuzzGame(Integer limit) {
-        this.limit = limit;
+    public FizzBuzzGame(Integer start, Integer end) {
+        this.inputIntegers = new InputIntegers(start, end);
     }
 
     public void start() {
-        // TODO streamはプログラマ的にはわかりやすいし、参照透過ではあるが。。。
-        IntStream.rangeClosed(1, limit)
-                .mapToObj(InputInteger::new)
-                .map(InputInteger::asFizzBuzzText)
-                .forEach(this::outputConsole);
+        this.outputConsole(inputIntegers.asOutputText());
     }
 
     private void outputConsole(String outputText) {
