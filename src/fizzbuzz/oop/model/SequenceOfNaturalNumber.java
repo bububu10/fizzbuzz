@@ -7,8 +7,8 @@ import java.util.stream.IntStream;
 public class SequenceOfNaturalNumber {
     List<NaturalNumber> values;
 
-    public SequenceOfNaturalNumber(Integer start, Integer end) {
-        this.values = IntStream.rangeClosed(start, end)
+    public SequenceOfNaturalNumber(FirstTerm firstTerm, LastTerm lastTerm) {
+        this.values = IntStream.rangeClosed(firstTerm.value, lastTerm.value)
                 .mapToObj(NaturalNumber::new)
                 .collect(Collectors.toList());
     }

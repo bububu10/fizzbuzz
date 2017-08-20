@@ -50,22 +50,24 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 .
 ├── FizzBuzzGame.java
 ├── model
+│   ├── FirstTerm.java
+│   ├── LastTerm.java
 │   ├── NaturalNumber.java
 │   └── SequenceOfNaturalNumber.java
 └── view
     └── ConsoleView.java
 ```
-@[3-5](「自然数」「連続した自然数の数列」という重要な概念（ドメインモデル）を明示的に。)
-@[6-7](「コンソールに出力する」というのはFizzBuzzゲームの本質的な関心事ではないが「表示」の重要な要件。)
+@[3-7](「初項」「末項」「自然数」「連続した自然数の数列」という重要な概念（ドメインモデル）を明示的に。)
+@[8-9](「コンソールに出力する」というのはFizzBuzzゲームの本質的な関心事ではないが「表示」の重要な要件。)
 @[2](FizzBuzzGameは「modelを使ってviewへ出力する」ことだけに専念する。)
 
 ---?code=src/fizzbuzz/oop/FizzBuzzGame.java&lang=java
-@[7,8,10-13]
-@[7,8,15]
+@[7,8,10-13](初期化：初項と末項を保持)
+@[7,8,15-19](modelを使ってviewへ出力する)
 
 ---?code=src/fizzbuzz/oop/model/SequenceOfNaturalNumber.java&lang=java
-@[8-14]
-@[16-21]
+@[8-14](初期化：初項と末項を元に自然数のリストを作る)
+@[16-21]()
 
 ---?code=src/fizzbuzz/oop/model/NaturalNumber.java&lang=java
 @[4-6]
