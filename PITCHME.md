@@ -55,9 +55,9 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 └── view
     └── ConsoleView.java
 ```
-@[3-5] 「自然数」「連続した自然数の数列」という重要な概念（ドメインモデル）を明示的に。
-@[6-7] 「コンソールに出力する」というのはFizzBuzzゲームの本質的な関心事ではないが「表示」の重要な要件。
-@[2] FizzBuzzGameは「modelを使ってviewへ出力する」ことだけに専念する。
+@[3-5](「自然数」「連続した自然数の数列」という重要な概念（ドメインモデル）を明示的に。)
+@[6-7](「コンソールに出力する」というのはFizzBuzzゲームの本質的な関心事ではないが「表示」の重要な要件。)
+@[2](FizzBuzzGameは「modelを使ってviewへ出力する」ことだけに専念する。)
 
 ---?code=src/fizzbuzz/transactionscript/FizzBuzzGame.java&lang=java
 @[7,8,10-13]
