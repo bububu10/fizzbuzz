@@ -21,4 +21,5 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 
 ---?code=src/fizzbuzz/transactionscript/FizzBuzzGame.java&lang=java
 
----
+---?code=src/Main.java&lang=java
+
