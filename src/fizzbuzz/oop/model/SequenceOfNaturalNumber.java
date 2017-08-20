@@ -8,6 +8,7 @@ public class SequenceOfNaturalNumber {
     List<NaturalNumber> values;
 
     public SequenceOfNaturalNumber(FirstTerm firstTerm, LastTerm lastTerm) {
+        if (firstTerm.isBiggerThan(lastTerm)) throw new IllegalArgumentException("末項が初項より大きいです。");
         this.values = IntStream.rangeClosed(firstTerm.value, lastTerm.value)
                 .mapToObj(NaturalNumber::new)
                 .collect(Collectors.toList());

@@ -62,19 +62,35 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 @[2](FizzBuzzGameは「modelを使ってviewへ出力する」ことだけに専念する。)
 
 ---?code=src/fizzbuzz/oop/FizzBuzzGame.java&lang=java
-@[7,8,10-13](初期化：初項と末項を保持)
-@[7,8,15-19](modelを使ってviewへ出力する)
+@[9-15](初期化：初項と末項を保持)
+@[9,10,17-21](modelを使ってviewへ出力する)
 
 ---?code=src/fizzbuzz/oop/model/SequenceOfNaturalNumber.java&lang=java
-@[8-14](初期化：初項と末項を元に自然数のリストを作る)
-@[16-21]()
+@[8-15](初期化：初項と末項の整合性をチェック、初項と末項を元に自然数のリストを作って保持)
+@[17-22](自身がviewへ出力される際のテキスト表現を返す)
 
 ---?code=src/fizzbuzz/oop/model/NaturalNumber.java&lang=java
-@[4-6]
-@[4,10-15]
-@[4,17]
+@[4-9](初期化：自然数としての整合性チェック、値を保持する)
+@[4,11-16](FizzBuzzGameのテキスト表現を返す)
+@[4,18](このクラス内だけで使う「割り切れる」という概念を明示的に表現する説明的な関数)
+
+---?code=src/fizzbuzz/oop/model/FirstTerm.java&lang=java
+@[4-9](初期化：初項としての整合性チェック、値を保持する)
+@[11-13](末項との関係を検査する関数)
+
+---?code=src/fizzbuzz/oop/model/LastTerm.java&lang=java
+@[4-9](初期化：末項としての整合性チェック、値を保持する)
 
 ---?code=src/fizzbuzz/oop/view/ConsoleView.java&lang=java
+@[5-7](引数で受け取ったものをコンソールへ出力するだけ)
+
+---
+
+* OOPを真面目に適用するとやや大袈裟な感じはする
+* でも、小さなプログラムでも「関心事」と「クラスの単一責任」を意識すると発見はある
+  * 対象の「本質的あるいは重要な概念」というものがパッケージ構造を見ただけで概観できる
+  * クラスを分割するとそのクラスが担保すべき整合性を発見しやすい
+  * 何か新たな発見があったときに手を加えやすい
 
 ---
 END
