@@ -57,7 +57,7 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 └── view
     └── ConsoleView.java
 ```
-@[3-7](「初項」「末項」「自然数」「連続した自然数の数列」という重要な概念を明示的に。)
+@[3-7](「初項」「末項」「自然数」「連続した自然数の数列」という本質的な概念を明示的に。)
 @[8-9](「コンソールに出力する」というのはFizzBuzzゲームの本質的な関心事ではないが「表示」の重要な要件。)
 @[2](FizzBuzzGameは「modelを使ってviewへ出力する」ことだけに専念する。)
 
