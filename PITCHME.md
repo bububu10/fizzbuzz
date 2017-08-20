@@ -47,6 +47,7 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 パッケージ構成
 
 ```text
+.
 ├── FizzBuzzGame.java
 ├── model
 │   ├── NaturalNumber.java
@@ -55,9 +56,9 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
     └── ConsoleView.java
 ```
 
-* 「自然数」「連続した自然数の数列」という重要な概念（ドメインモデル）をmodelパッケージとしてまとめ、明示的にクラスにする。
-* 「半角スペース区切りでコンソールに出力する」というのはFizzBuzzゲームの本質的な関心事ではないが重要な要件。それを明示的に表現するためにviewパッケージを作る。
-* これでFizzBuzzGameから「変換ルール」と「出力」に関する役割を追い出すことができる。
+* 「自然数」「連続した自然数の数列」という重要な概念（ドメインモデル）を明示的に。
+* 「半角スペース区切りでコンソールに出力する」というのはFizzBuzzゲームの本質的な関心事ではないが重要な要件。
+* FizzBuzzGameは「modelを使ってviewへ出力する」ことだけをやるようにする。
 
 ---?code=src/fizzbuzz/transactionscript/FizzBuzzGame.java&lang=java
 @[7,8,10-13]
