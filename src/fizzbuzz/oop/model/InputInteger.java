@@ -1,4 +1,4 @@
-package fizzbuzz.oop;
+package fizzbuzz.oop.model;
 
 class InputInteger {
     Integer value;

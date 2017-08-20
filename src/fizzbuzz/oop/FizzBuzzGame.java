@@ -1,17 +1,18 @@
 package fizzbuzz.oop;
 
+import fizzbuzz.oop.model.InputIntegers;
+import fizzbuzz.oop.view.ConsoleView;
+
 public class FizzBuzzGame {
     InputIntegers inputIntegers;
+    ConsoleView consoleView;
 
     public FizzBuzzGame(Integer start, Integer end) {
         this.inputIntegers = new InputIntegers(start, end);
+        this.consoleView = new ConsoleView();
     }
 
     public void start() {
-        this.outputConsole(inputIntegers.asOutputText());
-    }
-
-    private void outputConsole(String outputText) {
-        System.out.println(outputText);
+        consoleView.show(inputIntegers.asOutputText());
     }
 }
