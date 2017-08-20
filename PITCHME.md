@@ -24,7 +24,7 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 @[5-18]
 ---?code=src/Main.java&lang=java
 手続きの呼び出し
-@[7,11,13,15]
+@[6,7,9,11,13,15]
 
 ---
 
@@ -36,3 +36,5 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 ```
 
 ---
+
+END
