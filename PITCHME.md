@@ -59,20 +59,20 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 @[6-7](「コンソールに出力する」というのはFizzBuzzゲームの本質的な関心事ではないが「表示」の重要な要件。)
 @[2](FizzBuzzGameは「modelを使ってviewへ出力する」ことだけに専念する。)
 
----?code=src/fizzbuzz/transactionscript/FizzBuzzGame.java&lang=java
+---?code=src/fizzbuzz/oop/FizzBuzzGame.java&lang=java
 @[7,8,10-13]
 @[7,8,15]
 
----?code=src/fizzbuzz/transactionscript/model/SequenceOfNaturalNumber.java&lang=java
+---?code=src/fizzbuzz/oop/model/SequenceOfNaturalNumber.java&lang=java
 @[8-14]
 @[16-21]
 
----?code=src/fizzbuzz/transactionscript/model/NaturalNumber.java&lang=java
+---?code=src/fizzbuzz/oop/model/NaturalNumber.java&lang=java
 @[4-6]
 @[4,10-15]
 @[4,17]
 
----?code=src/fizzbuzz/transactionscript/view/ConsoleView.java&lang=java
+---?code=src/fizzbuzz/oop/view/ConsoleView.java&lang=java
 
 ---
 END
