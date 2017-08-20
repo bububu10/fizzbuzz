@@ -19,6 +19,6 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 
 ## まずは手続き的に実装（Transaction Script）
 
----?code=src/fizzbuzz/transactionscript/FizzBuzzGame.java
+---?code=src/fizzbuzz/transactionscript/FizzBuzzGame.java&lang=java
 
 ---
