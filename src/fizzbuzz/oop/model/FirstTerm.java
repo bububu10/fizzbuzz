@@ -1,15 +1,14 @@
 package fizzbuzz.oop.model;
 
 public class FirstTerm {
-    Integer value;
+    NaturalNumber naturalNumber;
 
     public FirstTerm(Integer value) {
-        if (value <= 0) throw new IllegalArgumentException("自然数しか受け付けません。");
-        this.value = value;
+        this.naturalNumber = new NaturalNumber(value);
     }
 
     boolean isBiggerThan(LastTerm lastTerm) {
-        return lastTerm.value < this.value;
+        return lastTerm.naturalNumber.value < this.naturalNumber.value;
     }
 
 }

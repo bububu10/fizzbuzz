@@ -4,7 +4,7 @@ class NaturalNumber {
     Integer value;
 
     NaturalNumber(Integer value) {
-        if (value <= 0) throw new IllegalArgumentException("自然数しか受け付けません。");
+        if (value <= 0) throw new IllegalArgumentException("1以上の整数しか受け付けません。");
         this.value = value;
     }
 
