@@ -1,4 +1,4 @@
-package fizzbuzz;
+package fizzbuzz.oop;
 
 class InputInteger {
     Integer value;
