@@ -1,9 +1,9 @@
 package fizzbuzz.oop.model;
 
-class InputInteger {
+class NaturalNumber {
     Integer value;
 
-    InputInteger(Integer value) {
+    NaturalNumber(Integer value) {
         this.value = value;
     }
 

@@ -3,17 +3,17 @@ package fizzbuzz.transactionscript;
 public class FizzBuzzGame {
 
     public static void start(int start, int end) {
-        for (int inputNumber = start; inputNumber <= end; inputNumber++) {
-            if (inputNumber % 3 == 0 && inputNumber % 5 == 0) {
+        for (int naturalNumber = start; naturalNumber <= end; naturalNumber++) {
+            if (naturalNumber % 3 == 0 && naturalNumber % 5 == 0) {
                 System.out.print("fizzbuzz");
-            } else if (inputNumber % 3 == 0) {
+            } else if (naturalNumber % 3 == 0) {
                 System.out.print("fizz");
-            } else if (inputNumber % 5 == 0) {
+            } else if (naturalNumber % 5 == 0) {
                 System.out.print("buzz");
             } else {
-                System.out.print(inputNumber);
+                System.out.print(naturalNumber);
             }
-            if (inputNumber != end) System.out.print(" ");
+            if (naturalNumber != end) System.out.print(" ");
         }
     }
 }

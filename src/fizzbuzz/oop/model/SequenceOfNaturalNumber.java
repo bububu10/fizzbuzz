@@ -4,19 +4,19 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class InputIntegers {
-    List<InputInteger> values;
+public class SequenceOfNaturalNumber {
+    List<NaturalNumber> values;
 
-    public InputIntegers(Integer start, Integer end) {
+    public SequenceOfNaturalNumber(Integer start, Integer end) {
         this.values = IntStream.rangeClosed(start, end)
-                .mapToObj(InputInteger::new)
+                .mapToObj(NaturalNumber::new)
                 .collect(Collectors.toList());
     }
 
     public String asOutputText() {
         return String.join(" ",
                 values.stream()
-                        .map(InputInteger::asFizzBuzzText)
+                        .map(NaturalNumber::asFizzBuzzText)
                         .collect(Collectors.toList()));
     }
 }
