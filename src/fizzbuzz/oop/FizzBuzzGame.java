@@ -11,6 +11,7 @@ public class FizzBuzzGame {
     }
 
     public void start() {
+        // TODO streamはプログラマ的にはわかりやすいし、参照透過ではあるが。。。
         IntStream.rangeClosed(1, limit)
                 .mapToObj(InputInteger::new)
                 .map(InputInteger::asFizzBuzzText)
