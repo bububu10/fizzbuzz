@@ -4,15 +4,17 @@ import fizzbuzz.oop.model.SequenceOfNaturalNumber;
 import fizzbuzz.oop.view.ConsoleView;
 
 public class FizzBuzzGame {
-    SequenceOfNaturalNumber sequenceOfNaturalNumber;
-    ConsoleView consoleView;
+    private final Integer start;
+    private final Integer end;
 
     public FizzBuzzGame(Integer start, Integer end) {
-        this.sequenceOfNaturalNumber = new SequenceOfNaturalNumber(start, end);
-        this.consoleView = new ConsoleView();
+        this.start = start;
+        this.end = end;
     }
 
     public void start() {
-        consoleView.show(sequenceOfNaturalNumber.asOutputText());
+        SequenceOfNaturalNumber sequenceOfNaturalNumber = new SequenceOfNaturalNumber(start, end);
+        ConsoleView view = new ConsoleView();
+        view.show(sequenceOfNaturalNumber.asOutputText());
     }
 }

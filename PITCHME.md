@@ -20,23 +20,64 @@ ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 ## 実行結果の例
 ---
 
+1から100までの連続した自然数の数列を処理した場合、
+以下のような結果がコンソールに出力される。
+
 ```text
 1 2 fizz 4 buzz fizz 7 8 fizz buzz 11 fizz 13 14 fizzbuzz 16 17 fizz 19 buzz fizz 22 23 fizz buzz 26 fizz 28 29 fizzbuzz 31 32 fizz 34 buzz fizz 37 38 fizz buzz 41 fizz 43 44 fizzbuzz 46 47 fizz 49 buzz fizz 52 53 fizz buzz 56 fizz 58 59 fizzbuzz 61 62 fizz 64 buzz fizz 67 68 fizz buzz 71 fizz 73 74 fizzbuzz 76 77 fizz 79 buzz fizz 82 83 fizz buzz 86 fizz 88 89 fizzbuzz 91 92 fizz 94 buzz fizz 97 98 fizz buzz
 ```
-
-1から100までの連続した自然数の数列を処理した場合、
-上記のような結果がコンソールに出力される。
 
 ---
 
 ## まずは手続き的に実装（Transaction Script）
 
 ---?code=src/fizzbuzz/transactionscript/FizzBuzzGame.java&lang=java
-手続きの実装
-@[5-18]
----?code=src/Main.java&lang=java
-手続きの呼び出しとプログラムの実行
-@[6,7,9,11,13,15]
+
+---
+
+これはこれでシンプルなので悪くはないが。。。
+
+---?code=src/fizzbuzz/transactionscript/FizzBuzzGame.java&lang=java
+@[6](「連続した自然数の数列」という重要な概念が「startからendまでの繰り返し」として暗黙に表現されている)
+@[7,9,11,13](「変換ルール」の「割り切れる」という概念がjavaの「%」「==」「&&」演算子の組み合わせで暗黙に表現されている)
+@[8,10,12,14](変換ルールによる「判断」をしたらそのまま「変換しつつ出力」するので、２つの関心事が強く結合している)
+@[16](各項を「半角スペース区切り」にする「出力フォーマットの調整」が「各項を変換->出力」した後処理としてさりげなく登場する)
+
+--
+
+## オブジェクト指向に忠実に実装(OOP)
+
+--
+
+パッケージ構成
+
+```text
+├── FizzBuzzGame.java
+├── model
+│   ├── NaturalNumber.java
+│   └── SequenceOfNaturalNumber.java
+└── view
+    └── ConsoleView.java
+```
+
+* 「自然数」「連続した自然数の数列」という重要な概念（ドメインモデル）をmodelパッケージとしてまとめ、明示的にクラスにする。
+* 「半角スペース区切りでコンソールに出力する」というのはFizzBuzzゲームの本質的な関心事ではないが重要な要件。それを明示的に表現するためにviewパッケージを作る。
+* これでFizzBuzzGameから「変換ルール」と「出力」に関する役割を追い出すことができる。
+
+--?code=src/fizzbuzz/transactionscript/FizzBuzzGame.java&lang=java
+@[7,8,10-13]
+@[7,8,15]
+
+--?code=src/fizzbuzz/transactionscript/model/SequenceOfNaturalNumber.java&lang=java
+@[8-14]
+@[16-21]
+
+--?code=src/fizzbuzz/transactionscript/model/NaturalNumber.java&lang=java
+@[4-6]
+@[4,10-15]
+@[4,17]
+
+--?code=src/fizzbuzz/transactionscript/view/ConsoleView.java&lang=java
 
 ---
 END
