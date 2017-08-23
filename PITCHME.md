@@ -6,8 +6,18 @@
 
 ---
 
-連続した自然数の数列の各項を次のルールで変換し、
-その結果を半角スペース区切りでコンソールに出力する。
+Wikipediaを見ましょう。
+
+Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
+
+---
+
+実装するために、仕様化します。
+
+---
+
+* 連続した自然数の数列の各項を次のルールで変換し、その結果を半角スペース区切りでコンソールに出力する。
+* プログラムに対する入力としては数列の初項と末項が与えられる。
 
 ---
 
@@ -17,15 +27,11 @@
   * 3と5の両方で割り切れるなら「FizzBuzz」と表示する。
   * いずれにも該当しない場合は、自然数をそのまま表示する。
 
-ref. Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
-
 ---
 
 実行結果の例
 
----
-
-1から100までの連続した自然数の数列を処理すると
+仮に、1から100までの連続した自然数の数列を処理すると
 
 ```text
 1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz Fizz 22 23 Fizz Buzz 26 Fizz 28 29 FizzBuzz 31 32 Fizz 34 Buzz Fizz 37 38 Fizz Buzz 41 Fizz 43 44 FizzBuzz 46 47 Fizz 49 Buzz Fizz 52 53 Fizz Buzz 56 Fizz 58 59 FizzBuzz 61 62 Fizz 64 Buzz Fizz 67 68 Fizz Buzz 71 Fizz 73 74 FizzBuzz 76 77 Fizz 79 Buzz Fizz 82 83 Fizz Buzz 86 Fizz 88 89 FizzBuzz 91 92 Fizz 94 Buzz Fizz 97 98 Fizz Buzz
@@ -54,11 +60,7 @@ OOP(Object Oriented Programing)
 
 ---
 
-## 「実装する」とは？
-
----
-
-「実装」という言葉は「仕様」とセット。
+## 「仕様」「実装」とは？
 
 ---
 
@@ -66,17 +68,6 @@ OOP(Object Oriented Programing)
   * プログラムが実現すべき機能。ふつう自然言語や図表によって記述される。
 * 実装
   * 仕様を満たすプログラムそのもの、またはプログラムを記述する行為のこと。
-
----
-
-これまでのスライドでいうと、
-
----
-
-* 「FizzBuzzとは？」
-  * 「仕様」についての記述
-* 「OOPとは？」
-  * 「実装」のアプローチについての記述
 
 ---
 
