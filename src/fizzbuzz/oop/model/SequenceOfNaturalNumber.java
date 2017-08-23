@@ -15,7 +15,7 @@ public class SequenceOfNaturalNumber {
                 .collect(Collectors.toList());
     }
 
-    public String asOutputText() {
+    public String asFizzBuzzText() {
         return String.join(" ",
                 values.stream()
                         .map(NaturalNumber::asFizzBuzzText)
