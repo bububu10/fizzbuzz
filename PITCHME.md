@@ -145,12 +145,11 @@ ref. オブジェクト指向できていますか？(SlideShare) https://www.sl
 @[2](FizzBuzzGameは「modelを使ってviewへ出力する」ことだけに専念する。)
 
 ---?code=src/fizzbuzz/oop/FizzBuzzGame.java&lang=java
-@[9-15](初期化：初項と末項を保持)
-@[9,10,17-21](modelを使ってviewへ出力する)
+@[10-15](modelを使ってviewへ出力する)
 
 ---?code=src/fizzbuzz/oop/model/SequenceOfNaturalNumber.java&lang=java
 @[8-16](初期化：初項と末項の整合性をチェック、初項と末項を元に自然数のリストを作って保持)
-@[17-23](自身がviewへ出力される際のテキスト表現を返す)
+@[17-23](自身のFizzBuzzとしてのテキスト表現を返す)
 
 ---?code=src/fizzbuzz/oop/model/NaturalNumber.java&lang=java
 @[4-9](初期化：自然数としての整合性チェック、値を保持する)

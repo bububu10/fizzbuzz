@@ -11,6 +11,6 @@ public class FizzBuzzGame {
         SequenceOfNaturalNumber sequenceOfNaturalNumber =
                 new SequenceOfNaturalNumber(new FirstTerm(firstTerm), new LastTerm(lastTerm));
         ConsoleView view = new ConsoleView();
-        view.show(sequenceOfNaturalNumber.asOutputText());
+        view.show(sequenceOfNaturalNumber.asFizzBuzzText());
     }
 }
