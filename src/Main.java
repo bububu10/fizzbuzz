@@ -16,8 +16,8 @@ public class Main {
 
     private static void executeOOP() {
         logger.println("fizzbuzz.oop.FizzBuzzGame#start");
-        fizzbuzz.oop.FizzBuzzGame oopFizzBuzzGame = new fizzbuzz.oop.FizzBuzzGame(1, 100);
-        oopFizzBuzzGame.start();
+        fizzbuzz.oop.FizzBuzzGame oopFizzBuzzGame = new fizzbuzz.oop.FizzBuzzGame();
+        oopFizzBuzzGame.start(1, 100);
     }
 
 }
