@@ -34,13 +34,13 @@ Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 OOP(Object Oriented Programing)
 
 * データとふるまいを持つ「オブジェクト」を組み合わせることによって、機能を実現する。
-* オブジェクトはプログラムの「関心事」を表現し、「単一の責任」を果たす。
+* オブジェクトはプログラムの「関心事」を表現し、「単一の責務」を果たす。
 * 機能を実現するために「手続きを記述する」のではなく「関心事をオブジェクトモデル化する」という考え方をする。
 * 「手続きを記述する」アプローチはTransaction Scriptと呼ばれる。気を抜くとこちらになりがち。
 
 今回はFizzBuzzという仕様を、Javaというプログラミング言語を使ってOOPアプローチで実装します。
 
-## オブジェクト指向に忠実に実装
+## OOPに忠実に実装
 
 ### 具体的な指針(オブジェクト指向エクササイズの9つのルール)  
 
@@ -65,3 +65,22 @@ ref. オブジェクト指向できていますか？(SlideShare) https://www.sl
 * 各オブジェクトは矢印の先に依存している。
 * 破線は抽象的に「依存」を表し、実線は「関連」を表す。
 * オブジェクトの根本にあるダイアモンドは「集約」を表す。
+
+```text
+[FizzBuzzGame]-->[model]
+[FizzBuzzGame]-->[view]
+
+[<package> model|
+  [NaturalNumber||asFizzBuzzText(): String]
+  [FirstTerm]o->1[NaturalNumber]
+  [LastTerm]o->1[NaturalNumber]
+  [SequenceOfNaturalNumber||asFizzBuzzText(): String]
+  [SequenceOfNaturalNumber]o->1..*[NaturalNumber]
+  [SequenceOfNaturalNumber]-->[FirstTerm]
+  [SequenceOfNaturalNumber]-->[LastTerm]
+]
+[<package> view|
+  [ConsoleView||show(outputText: String): void]
+]
+```
+ref. http://www.nomnoml.com/
