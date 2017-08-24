@@ -7,7 +7,7 @@ import fizzbuzz.oop.view.ConsoleView;
 
 public class FizzBuzzGame {
 
-    public void start(Integer firstTerm, Integer lastTerm) {
+    public void start(int firstTerm, int lastTerm) {
         SequenceOfNaturalNumber sequenceOfNaturalNumber =
                 new SequenceOfNaturalNumber(new FirstTerm(firstTerm), new LastTerm(lastTerm));
         ConsoleView view = new ConsoleView();
