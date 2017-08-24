@@ -57,3 +57,11 @@ OOP(Object Oriented Programing)
 9. Getter, Setter, プロパティを使用しないこと
 
 ref. オブジェクト指向できていますか？(SlideShare) https://www.slideshare.net/MoriharuOhzu/ss-14083300
+
+### ダイアグラム
+
+![diagram](./diagram.png)
+
+* 各オブジェクトは矢印の先に依存している。
+* 破線は抽象的に「依存」を表し、実線は「関連」を表す。
+* オブジェクトの根本にあるダイアモンドは「集約」を表す。
