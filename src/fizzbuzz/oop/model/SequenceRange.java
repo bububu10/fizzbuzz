@@ -1,5 +1,6 @@
 package fizzbuzz.oop.model;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -18,9 +19,10 @@ class SequenceRange {
     }
 
     List<NaturalNumber> asSequentialList() {
-        return IntStream
+        List<NaturalNumber> list = IntStream
                 .rangeClosed(firstTerm.asNumeric(), lastTerm.asNumeric())
                 .mapToObj(NaturalNumber::new)
                 .collect(Collectors.toList());
+        return Collections.unmodifiableList(list);
     }
 }
