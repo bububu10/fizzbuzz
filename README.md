@@ -23,8 +23,6 @@ Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
   * 結果は、画面をわざわざつくるのも面倒なので、コンソールへ出力する。
   * 上で示した結果が得られるように、一つ一つの結果はスペースで区切って出力する。
 
-[ソースコード](./src/fizzbuzz/transactionscript/FizzBuzzGame.java)
-
 ## OOPとは？
 
 オブジェクト指向プログラミング  
