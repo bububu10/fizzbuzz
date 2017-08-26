@@ -12,6 +12,10 @@ public class Main {
         logger.println("fizzbuzz.transactionscript.FizzBuzzGame#start");
         fizzbuzz.transactionscript.FizzBuzzGame.start(1, 100);
         System.out.print("\n");
+
+        logger.println("fizzbuzz.transactionscript.FizzBuzzGameRefactored#start");
+        fizzbuzz.transactionscript.FizzBuzzGameRefactored.start(1, 100);
+        System.out.print("\n");
     }
 
     private static void executeOOP() {
