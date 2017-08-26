@@ -60,7 +60,7 @@ OOP(Object Oriented Programing)
 
 ### 実装パターン
 
-* ValueObject
+* Value Object
 * First Class Collection
 
 ### 最終的なFizzBuzzゲームの仕様を自然言語で表現する
