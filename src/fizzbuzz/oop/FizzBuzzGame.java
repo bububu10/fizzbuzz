@@ -1,16 +1,14 @@
 package fizzbuzz.oop;
 
-import fizzbuzz.oop.model.FirstTerm;
-import fizzbuzz.oop.model.LastTerm;
-import fizzbuzz.oop.model.SequenceOfNaturalNumber;
+import fizzbuzz.oop.model.SequenceOfNaturalNumbers;
 import fizzbuzz.oop.view.ConsoleView;
 
 public class FizzBuzzGame {
 
-    public void start(int firstTerm, int lastTerm) {
-        SequenceOfNaturalNumber sequenceOfNaturalNumber =
-                new SequenceOfNaturalNumber(new FirstTerm(firstTerm), new LastTerm(lastTerm));
-        ConsoleView view = new ConsoleView();
-        view.show(sequenceOfNaturalNumber.asFizzBuzzText());
+    private final ConsoleView consoleView = new ConsoleView();
+
+    public void start(int start, int end) {
+        SequenceOfNaturalNumbers sequenceOfNaturalNumbers = SequenceOfNaturalNumbers.of(start, end);
+        consoleView.show(sequenceOfNaturalNumbers.asFizzBuzzText());
     }
 }

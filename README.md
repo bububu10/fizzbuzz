@@ -45,30 +45,6 @@ OOP(Object Oriented Programing)
 妥当なモデルが見つかるまで繰り返し修正し続けること（分析-設計-実装を繰り返すこと）。
 1回きりの分析-設計-実装では、絶対に妥当なモデルはできない。繰り返すたびにモデルは洗練され、修正コストは減っていく。
 
-### 試行錯誤
-
-FizzBuzzというゲームにとっての本質的で重要な「関心事」とはなにか？ベタに書いたコードをいじりながら考える。
-
-* 1回目
-  * 「コンソールに出力する」というのは「結果表示」の話であって、このゲームの本質的な関心事ではないのは明らか。
-  * 「ConsoleView」クラスを作って、表示(System.out.println())はそのクラスにまかせる。
-  * このゲームの関心事は「数をFizz,Buzz,FizzBuzzへ変換する（あるいは変換しない）」ということ。 
-  * 変換結果を表す「FizzBuzzText」クラスを作って、変換ロジックをそこへ持たせてみる。
-  * FizzBuzzTextクラスは「１つの数」を受け取って、それを「Fizz,Buzz,FizzBuzzへ変換する（あるいは変換しない）」
-  * やってみたらまあ悪くはないが、FizzBuzzGameから繰り返しのループは無くならないし、イマイチすっきりしない。
-
-* 2回目
-  * よく考えてみると、このゲームで扱う「数」というのは「0以上の整数」なので、実は「自然数」ということ。
-  * 引数で受け取った開始と終了の数がそれぞれ「自然数」なのかどうかチェックしないといけないのでは？
-  * 「自然数」クラスを作って、自身が自然数として妥当なのかのチェックロジックを持たせる。
-  * 引数で受け取った開始と終了の数の大小関係が開始＞終了だったらおかしいのでチェックが必要。
-  * このゲームは正確にいうと「連続した自然数の数列を、特定のルールに則ってFizz,Buzz,FizzBuzzへ変換する（あるいは変換しない）ゲーム」なのだった。
-  * なので、「連続した自然数の数列」クラスを作り、開始＜終了という関係になっているかのチェックロジックを持たせる。
-  * 「連続した自然数の数列」クラスは自分のテキスト表現（各項をスペース区切りで連結する）を知っているというのは自然に思える。
-  * こうすればFizzBuzzGameから繰り返しのループがなくなり、「連続した自然数の数列」を作って、「ConsoleView」へ出力をお願いするだけ。
-  * 考慮していなかった入力の妥当性チェックが明らかになり、仕様もより厳密になった。そしてそれはモデルで表現されている。
-  * ひとつひとつのモデルは極めて小さく、責務が明確になった。
-
 ### 最終的なクラス構造を表したダイアグラム
 
 ![diagram](./diagram.png)
@@ -115,16 +91,12 @@ http://www.nomnoml.com/
 [FizzBuzzGame]-->[view]
 
 [<package> model|
-  [NaturalNumber||asFizzBuzzText(): String]
-  [FirstTerm]o->1[NaturalNumber]
-  [LastTerm]o->1[NaturalNumber]
-  [SequenceOfNaturalNumber||asFizzBuzzText(): String]
   [SequenceOfNaturalNumber]o->1..*[NaturalNumber]
-  [SequenceOfNaturalNumber]-->[FirstTerm]
-  [SequenceOfNaturalNumber]-->[LastTerm]
+  [SequenceOfNaturalNumber]-->[SequenceRange]
+  [SequenceRange]o->2[NaturalNumber]
 ]
 [<package> view|
-  [ConsoleView||show(outputText: String): void]
+  [ConsoleView]
 ]
 ```
 
