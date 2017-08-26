@@ -54,15 +54,6 @@ OOP(Object Oriented Programing)
 * クラスの根本にあるダイアモンドは「集約」を表す。
 * 矢印の周りについている数字は「多重度（カーディナリティ）」を表す。
 
-### 設計パターン
-
-* MVC(Model-View-Controller)
-
-### 実装パターン
-
-* Value Object
-* First Class Collection
-
 ### 最終的なFizzBuzzゲームの仕様を自然言語で表現する
 
 * 連続した自然数の数列の各項を次のルールで変換し、その結果を半角スペース区切りでコンソールに出力する。
@@ -73,7 +64,13 @@ OOP(Object Oriented Programing)
   * いずれにも該当しない場合は、自然数をそのまま表示する。
 * プログラムに対する入力としては数列の初項と末項が与えられる。 
 
-### 参考1: OOPの一つの指針(オブジェクト指向エクササイズの9つのルール)  
+### 参考1: 念頭にある設計/実装パターン
+
+* MVC(Model-View-Controller)
+* Value Object
+* First Class Collection
+
+### 参考2: OOPの一つの指針(オブジェクト指向エクササイズの9つのルール)  
 
 実装の際の具体的な指針として次のルールを意識する。
 
@@ -89,7 +86,7 @@ OOP(Object Oriented Programing)
 
 ref. オブジェクト指向できていますか？(SlideShare) https://www.slideshare.net/MoriharuOhzu/ss-14083300
 
-### 参考2: ダイアグラムの作成サービス
+### 参考3: ダイアグラムの作成サービス
 
 今回のようなちょっとしたクラス・パッケージ図の作成には以下のようなwebサービスが便利。
 http://www.nomnoml.com/
