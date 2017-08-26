@@ -53,7 +53,15 @@ OOP(Object Oriented Programing)
 * 破線は抽象的に「依存」を表し、実線は「関連」を表す。
 * クラスの根本にあるダイアモンドは「集約」を表す。
 * 矢印の周りについている数字は「多重度（カーディナリティ）」を表す。
-* それぞれの用語について必要であれば口頭で。
+
+### 設計パターン
+
+* MVC(Model-View-Controller)
+
+### 実装パターン
+
+* ValueObject
+* First Class Collection
 
 ### 最終的なFizzBuzzゲームの仕様を自然言語で表現する
 
