@@ -1,7 +1,7 @@
 package fizzbuzz.oop.view;
 
 /**
- * コンソール
+ * コンソールView
  */
 public class ConsoleView {
 
