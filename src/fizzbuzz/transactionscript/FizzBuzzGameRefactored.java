@@ -7,7 +7,8 @@ import java.util.stream.IntStream;
 public class FizzBuzzGameRefactored {
 
     public static void start(int start, int end) {
-        showConsole(join(toFizzBuzzes(start, end)));
+        String outputText = join(toFizzBuzzes(start, end));
+        showConsole(outputText);
     }
 
     private static List<String> toFizzBuzzes(int start, int end) {
