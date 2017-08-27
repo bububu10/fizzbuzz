@@ -9,13 +9,9 @@ import java.util.stream.Collectors;
 public class SequenceOfNaturalNumbers {
     List<NaturalNumber> values;
 
-    private SequenceOfNaturalNumbers(List<NaturalNumber> values) {
-        this.values = values;
-    }
-
-    public static SequenceOfNaturalNumbers of(int start, int end) {
+    public SequenceOfNaturalNumbers(int start, int end) {
         SequenceRange range = new SequenceRange(new NaturalNumber(start), new NaturalNumber(end));
-        return new SequenceOfNaturalNumbers(range.asSequentialList());
+        this.values = range.asSequentialList();
     }
 
     public String asFizzBuzzText() {

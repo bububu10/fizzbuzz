@@ -14,7 +14,7 @@ public class FizzBuzzGame {
     }
 
     public void start() {
-        SequenceOfNaturalNumbers sequenceOfNaturalNumbers = SequenceOfNaturalNumbers.of(start, end);
+        SequenceOfNaturalNumbers sequenceOfNaturalNumbers = new SequenceOfNaturalNumbers(start, end);
         consoleView.show(sequenceOfNaturalNumbers.asFizzBuzzText());
     }
 }
