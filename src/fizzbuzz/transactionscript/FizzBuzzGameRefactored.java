@@ -5,21 +5,28 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class FizzBuzzGameRefactored {
+    private final int start;
+    private final int end;
 
-    public static void start(int start, int end) {
+    public FizzBuzzGameRefactored(int start, int end) {
+        this.start = start;
+        this.end = end;
+    }
+
+    public void start() {
         String outputText = join(toFizzBuzzes(start, end));
         showConsole(outputText);
     }
 
-    private static List<String> toFizzBuzzes(int start, int end) {
+    private List<String> toFizzBuzzes(int start, int end) {
         // startからendまでの連続した数をfizzbuzzのルールに基いて変換した文字列のリストを返す
         return IntStream
                 .rangeClosed(start, end)
-                .mapToObj(FizzBuzzGameRefactored::toFizzBuzz)
+                .mapToObj(this::toFizzBuzz)
                 .collect(Collectors.toList());
     }
 
-    private static String toFizzBuzz(int number) {
+    private String toFizzBuzz(int number) {
         // 1つの数をfizzbuzzのルールに基いて変換して文字列として返す
         if (number % 3 == 0 && number % 5 == 0) return "FizzBuzz";
         if (number % 3 == 0) return "Fizz";
@@ -27,12 +34,12 @@ public class FizzBuzzGameRefactored {
         return String.valueOf(number);
     }
 
-    private static String join(List<String> fizzBuzzTextList) {
+    private String join(List<String> fizzBuzzTextList) {
         // リストをスペース区切りで連結して１つの文字列にする
         return String.join(" ", fizzBuzzTextList);
     }
 
-    private static void showConsole(String outputText) {
+    private void showConsole(String outputText) {
         // コンソールへ文字列を出力する
         System.out.print(outputText);
     }

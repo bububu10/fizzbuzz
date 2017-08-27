@@ -4,10 +4,16 @@ import fizzbuzz.oop.model.SequenceOfNaturalNumbers;
 import fizzbuzz.oop.view.ConsoleView;
 
 public class FizzBuzzGame {
-
+    private final int start;
+    private final int end;
     private final ConsoleView consoleView = new ConsoleView();
 
-    public void start(int start, int end) {
+    public FizzBuzzGame(int start, int end) {
+        this.start = start;
+        this.end = end;
+    }
+
+    public void start() {
         SequenceOfNaturalNumbers sequenceOfNaturalNumbers = SequenceOfNaturalNumbers.of(start, end);
         consoleView.show(sequenceOfNaturalNumbers.asFizzBuzzText());
     }
