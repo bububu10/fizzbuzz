@@ -1,5 +1,6 @@
 package fizzbuzz.transactionscript;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -16,6 +17,14 @@ public class FizzBuzzGameRefactored {
                 .rangeClosed(start, end)
                 .mapToObj(FizzBuzzGameRefactored::toFizzBuzz)
                 .collect(Collectors.toList());
+
+        // 上の文は下の文と同値。for文よりもStreamを使った方が宣言的でコレクションに対する操作の意図が明確。
+        //
+        // List<String> list = new ArrayList<>();
+        // for(int number = start; number < end; number++) {
+        //     list.add(toFizzBuzz(number));
+        // }
+        // return list;
     }
 
     private static String toFizzBuzz(int number) {
