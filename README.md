@@ -43,7 +43,7 @@ OOP(Object Oriented Programing)
 * 妥当なモデルが見つかるまで繰り返し修正し続けること（分析-設計-実装を繰り返すこと）。
 * 頻出する設計/実装パターンを知っていること。
   * 今回念頭に置いているのは以下のパターン
-    * MVC(Model-View-Controller)
+    * MVC(Model-View-Controller) or MVP(Model-View-Presenter)
     * Value Object
     * First Class Collection
 
