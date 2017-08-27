@@ -1,27 +1,34 @@
 import log.ConsoleLogger;
 
 public class Main {
-    private final static ConsoleLogger logger = new ConsoleLogger();
-
     public static void main(String[] args) {
         executeTransactionScript();
+        executeTransactionScriptRefactored();
         executeOOP();
     }
 
     private static void executeTransactionScript() {
-        logger.println("fizzbuzz.transactionscript.FizzBuzzGame#start");
+        ConsoleLogger logger = new ConsoleLogger("fizzbuzz.transactionscript.FizzBuzzGame");
+        logger.start();
         fizzbuzz.transactionscript.FizzBuzzGame.start(1, 100);
         System.out.print("\n");
+        logger.end();
+    }
 
-        logger.println("fizzbuzz.transactionscript.FizzBuzzGameRefactored#start");
+    private static void executeTransactionScriptRefactored() {
+        ConsoleLogger logger = new ConsoleLogger("fizzbuzz.transactionscript.FizzBuzzGameRefactored");
+        logger.start();
         fizzbuzz.transactionscript.FizzBuzzGameRefactored.start(1, 100);
         System.out.print("\n");
+        logger.end();
     }
 
     private static void executeOOP() {
-        logger.println("fizzbuzz.oop.FizzBuzzGame#start");
+        ConsoleLogger logger = new ConsoleLogger("fizzbuzz.oop.FizzBuzzGame");
+        logger.start();
         fizzbuzz.oop.FizzBuzzGame oopFizzBuzzGame = new fizzbuzz.oop.FizzBuzzGame();
         oopFizzBuzzGame.start(1, 100);
+        logger.end();
     }
 
 }
