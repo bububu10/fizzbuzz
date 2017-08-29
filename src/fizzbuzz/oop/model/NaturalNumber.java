@@ -12,9 +12,9 @@ class NaturalNumber {
     }
 
     String asFizzBuzzText() {
-        if (this.isDivisibleBy(3) && this.isDivisibleBy(5)) return "FizzBuzz";
-        if (this.isDivisibleBy(3)) return "Fizz";
-        if (this.isDivisibleBy(5)) return "Buzz";
+        if (this.isMultipleOf(3) && this.isMultipleOf(5)) return "FizzBuzz";
+        if (this.isMultipleOf(3)) return "Fizz";
+        if (this.isMultipleOf(5)) return "Buzz";
         return value.toString();
     }
 
@@ -26,7 +26,7 @@ class NaturalNumber {
         return value;
     }
 
-    private boolean isDivisibleBy(Integer divisor) {
-        return value % divisor == 0;
+    private boolean isMultipleOf(Integer integer) {
+        return value % integer == 0;
     }
 }
