@@ -1,12 +1,10 @@
 # FizzBuzzをOOPに忠実に実装する
 
-## FizzBuzzとは？
-
-Wikipediaを見ましょう。
+## FizzBuzz？
 
 Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 
-### 実行結果の例
+### example
 
 仮に、1から100までFizzBuzzGameを続けると、
 
@@ -16,38 +14,7 @@ Fizz Buzz(wikipedia) https://ja.wikipedia.org/wiki/Fizz_Buzz
 
 上記の結果が得られる。
 
-## とりあえずベタに実装してみる
-
-* 最低限の仕様を決める
-  * プログラムは開始と終了の数を受け取る。
-  * 結果は、画面をわざわざつくるのも面倒なので、コンソールへ出力する。
-  * 上で示した結果が得られるように、一つ一つの結果はスペースで区切って出力する。
-
-## OOPとは？
-
-オブジェクト指向プログラミング  
-OOP(Object Oriented Programing)
-
-* データとふるまいを持つ「オブジェクト」を組み合わせることによって、機能を実現する。
-* オブジェクトはプログラムの「関心事」を表現し、「単一の責務」を果たす。
-* 機能を実現するために「手続きを記述する」のではなく「関心事をオブジェクトモデル化する」という考え方をする。
-* 「手続きを記述する」アプローチはTransaction Scriptと呼ばれる（上の実装がまさにこれ）。
-
-今回はFizzBuzzゲームを、Javaというプログラミング言語を使ってOOPアプローチで実装します。
-ちなみに、Javaではオブジェクトの定義のことを「クラス」と言い、オブジェクトが保持するデータの定義は「フィールド」、ふるまいの定義は「メソッド」と呼びます。
-
-## OOPに忠実に実装
-
-### OOPアプローチで大事なこと
-
-* 妥当なモデルが見つかるまで繰り返し修正し続けること（分析-設計-実装を繰り返すこと）。
-* 頻出する設計/実装パターンを知っていること。
-  * 今回念頭に置いているのは以下のパターン
-    * MVC(Model-View-Controller) or MVP(Model-View-Presenter)
-    * Value Object
-    * First Class Collection
-
-### 最終的なクラス構造を表したダイアグラム
+### diagram
 
 ![diagram](./diagram.png)
 
@@ -56,7 +23,7 @@ OOP(Object Oriented Programing)
 * クラスの根本にあるダイアモンドは「集約」を表す。
 * 矢印の周りについている数字は「多重度（カーディナリティ）」を表す。
 
-### 最終的なFizzBuzzゲームの仕様を自然言語で表現する
+### specification description
 
 * 連続した自然数の数列の各項を次のルールで変換し、その結果を半角スペース区切りでコンソールに出力する。
 * 変換ルール
@@ -66,9 +33,7 @@ OOP(Object Oriented Programing)
   * いずれにも該当しない場合は、自然数をそのまま表示する。
 * プログラムに対する入力としては数列の初項と末項が与えられる。 
 
-### 参考1: OOPの一つの指針(オブジェクト指向エクササイズの9つのルール)  
-
-実装の際の具体的な指針として次のルールを意識する。
+### reference
 
 1. １つのメソッドにつきインデントは１段階までにすること
 2. else 句を使用しないこと
@@ -81,25 +46,3 @@ OOP(Object Oriented Programing)
 9. Getter, Setter, プロパティを使用しないこと
 
 ref. オブジェクト指向できていますか？(SlideShare) https://www.slideshare.net/MoriharuOhzu/ss-14083300
-
-### 参考2: ダイアグラムの作成サービス
-
-今回のようなちょっとしたクラス・パッケージ図の作成には以下のようなwebサービスが便利。
-http://www.nomnoml.com/
-
-```text
-[FizzBuzzGame]-->[model]
-[FizzBuzzGame]-->[view]
-
-[<package> model|
-  [SequenceOfNaturalNumber]o->1..*[NaturalNumber]
-  [SequenceOfNaturalNumber]-->[SequenceRange]
-  [SequenceRange]o->2[NaturalNumber]
-]
-[<package> view|
-  [ConsoleView]
-]
-```
-
-上記テキストを貼り付けると、上で貼ったような図ができる。
-ソースを直接取り込んで図を自動生成するツールもあるが、今回は面倒なのでやってない。
